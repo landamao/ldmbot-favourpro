@@ -263,10 +263,10 @@ class 喜欢懒大猫(Star):
             名字 = 状态['name'] or 用户ID or event.get_sender_name()
 
         response_text = (
-            f"用户 {名字} (ID: {目标ID}) 的状态：\n"
-            f"好感度：{状态['favour']}\n"
-            f"关系：{状态['relationship']}\n"
-            f"印象：{状态['attitude']}"
+            f"👤 用户 {名字} (ID: {目标ID}) 的状态：\n"
+            f"💖 好感度：{状态['favour']}\n"
+            f"🤝 关系：{状态['relationship']}\n"
+            f"✨ 印象：{状态['attitude']}"
         )
         yield event.plain_result(response_text)
 
@@ -487,7 +487,7 @@ class 喜欢懒大猫(Star):
             name = 状态.get('name', UID)
             line = (
                 f"{i + 1}. {name} (ID: {UID})\n"
-                f"   - 好感: {状态['favour']}, 关系: {状态['relationship']}, 印象: {状态['attitude']}"
+                f"    💖 好感：{状态['favour']}\n    🤝 关系：{状态['relationship']}\n    ✨ 印象：{状态['attitude']}"
             )
             排行列表.append(line)
 
@@ -529,7 +529,7 @@ class 喜欢懒大猫(Star):
             名字 = 状态.get('name', UID)
             行 = (
                 f"{i + 1}. {名字} (ID: {UID})\n"
-                f"   - 好感: {状态['favour']}, 关系: {状态['relationship']}, 印象: {状态['attitude']}"
+                f"    💖 好感：{状态['favour']}\n    🤝 关系：{状态['relationship']}\n    ✨ 印象：{状态['attitude']}"
             )
             排行列表.append(行)
 
@@ -668,7 +668,7 @@ class 喜欢懒大猫(Star):
             名字 = 状态.get('name', 用户ID)
             行 = (
                 f"{i + 1}. {名字} (ID: {用户ID})\n"
-                f"   💖 好感: {状态['favour']}  |  🤝 关系: {状态['relationship']}  |  💬 印象: {状态['attitude']}"
+                f"   💖 好感: {状态['favour']}  |  🤝 关系: {状态['relationship']}  |  ✨ 印象: {状态['attitude']}"
             )
             排行列表.append(行)
 

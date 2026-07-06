@@ -1,6 +1,6 @@
 name: 新好感度
 desc: 好感度、印象与关系管理系统，按群隔离，LLM 自动更新状态
 help: 查询好感/设置好感/设置印象/设置关系/设置全部/重置好感/重置负面/重置全部/好感排行/负好感排行/撤销修改
-version: 1.0.0
+version: 1.0.1
 author: 懒大猫
 repo: https://github.com/landamao/ldmbot-favourpro
