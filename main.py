@@ -642,6 +642,15 @@ class 喜欢懒大猫(Star):
         if not event.is_admin():
             return "❌ 错误：好感度排行查询仅限管理员使用。"
 
+        # LLM 工具参数常以 float 传入（如 10.0），切片/比较前强制转 int
+        try:
+            排序方式 = int(排序方式)
+            数量 = int(数量)
+        except (TypeError, ValueError):
+            return "❌ 错误：排序方式和数量必须是整数。"
+        if 数量 <= 0:
+            return "❌ 错误：排行数量必须是一个正整数。"
+
         群组数据 = self.好感度系统.获取群组数据(群ID)
         if not 群组数据:
             return "📭 当前群没有任何用户数据。"

@@ -54,7 +54,12 @@ LDMBot 好感度、印象与关系管理插件，按群隔离。
 
 | 工具名 | 说明 |
 |--------|------|
-| `favour_rank` | 查询好感度排行，支持正序/倒序，仅管理员可用 |
+| `favour_rank` | 查询好感度排行，支持正序/倒序，仅管理员可用。参数 `数量`/`排序方式` 会强制转 int，兼容 LLM 传入的 float（如 10.0） |
+
+## 更新记录
+
+### 1.0.2
+- 修复 `favour_rank` 工具：LLM 传入 float 参数（如 `数量=10.0`）时切片报 `TypeError: slice indices must be integers`
 
 ## 配置项
 
